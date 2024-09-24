@@ -1,0 +1,28 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "itemName": "item1",
+            "description": "item1 description",
+            "stock": true,
+            "price": 1.50,
+            "image": "image1url"
+        },
+        {
+            "id": 2,
+            "itemName": "item2",
+            "description": "item2 description",
+            "stock": true,
+            "price": 1.50,
+            "image": "image2url"
+        },
+        {
+            "id": 3,
+            "itemName": "item3",
+            "description": "item3 description",
+            "stock": true,
+            "price": 1.50,
+            "image": "image3url"
+        }
+    ]
+}
