@@ -1,21 +1,14 @@
 import { Card, Container, Row } from "react-bootstrap"
-import { Button } from "react-bootstrap"
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import { Alert } from "react-bootstrap";
 import axios from "axios"
+import './style.css'
 
-function Product() {
-    let params = useParams()
-    let navigate = useNavigate()
+function ProductsHome() {
 
     let [products, setProducts] = useState([])
     let [error, setError] = useState()
-
-    async function refreshProducts() {
-        const response = await axios.get("http://localhost:3001/products")
-        setProducts(response.data)
-    }
 
     useEffect(() => {
         setError(null);
@@ -31,41 +24,32 @@ function Product() {
         fetchProducts();
     }, []);
 
-    function deleteProduct(id) {
-        axios.delete(`http://localhost:3001/products/${id}`)
-            .then(refreshProducts)
-    }
 
     function errorMessage() {
         return <Alert variant="danger">There was an error attempting to load this product: {error}</Alert>
     }
 
-    function handleDeleteProduct(id) {
-        deleteProduct(id)
-        //may have to navigate to certain param after deleting or view function
-    }
 
     function productCard(products) {
-        let { id, itemName, description, temp, price, image } = products
+        let { id, itemName, price, image } = products
         console.log("item id:" + id)
         return (
-            <Card key={id} className="d-inline-block align-top" style={{ width: '30%', margin: '2px' }}>
-                <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                    <Card.Img style={{ width: '80%' }} src={image} />
+            <Card key={id} className="bordercard card-design font d-inline-block align-top">
+                <Card.Body className="padding d-flex flex-column justify-content-center align-items-center">
+                    <Card.Img className="img" src={image} />
                     <Card.Title>{itemName}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{description}</Card.Subtitle>
                     <Card.Text>
-                        <span>Temperature: {temp}</span>
-                        <strong>Price:</strong> <span>${price}</span>
+                        <div>
+                            <strong>Price: ${price}</strong>
+                        </div>
                     </Card.Text>
-                    <div className="d-flex">
-                        <Link to={`/products/${id}/edit`} className="btn btn-primary mx-2">Edit</Link>
-                        <Button variant="danger" onClick={() => handleDeleteProduct(id)}>Delete</Button>
+                    <div style={{ transform: 'scale(0.8)' }} className="d-flex align-items-center">
+                        <Link to={`/${id}/full`} className="view btn btn-secondary ms-1">View</Link>
+                        <Link to={`/${id}/edit-home`} className="edit btn btn-primary ms-1">Edit</Link>
                     </div>
                 </Card.Body>
             </Card>
-
-        )
+        );
     }
     return (
         <Container>
@@ -78,4 +62,4 @@ function Product() {
     );
 }
 
-export default Product
+export default ProductsHome

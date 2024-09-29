@@ -1,28 +1,52 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "itemName": "item1",
-            "description": "item1 description",
-            "color": "blue",
-            "price": 1.50,
-            "image": "image1url"
-        },
-        {
-            "id": 2,
-            "itemName": "item2",
-            "description": "item2 description",
-            "color": "red",
-            "price": 1.50,
-            "image": "image2url"
-        },
-        {
-            "id": 3,
-            "itemName": "item3",
-            "description": "item3 description",
-            "color": "yellow",
-            "price": 1.50,
-            "image": "image3url"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "itemName": "Espresso",
+      "description": "A concentrated coffee shot made with an espresso machine. Espresso can be made from any type of coffee bean, but there are special espresso roasts available.",
+      "temp": "cold",
+      "price": "2.20",
+      "image": "https://www.thespruceeats.com/thmb/DIUuY3Fj_51rINr-vN4KQD2Js24=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg"
+    },
+    {
+      "id": "2",
+      "itemName": "Cappuccino",
+      "description": "A balanced blend of equal parts espresso, steamed milk, and milk foam. It’s creamy and frothy, often topped with cocoa or cinnamon.",
+      "temp": "hot",
+      "price": "4.30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/375px-Cappuccino_at_Sightglass_Coffee.jpg"
+    },
+    {
+      "id": "3",
+      "itemName": "Americano",
+      "description": "Made by diluting a shot of espresso with hot water, resulting in a milder coffee with a similar strength to brewed coffee but a distinct espresso flavor.",
+      "temp": "hot",
+      "price": "2.70",
+      "image": "https://assets.beanbox.com/blog_images/AB7ud4YSE6nmOX0iGlgA.jpeg"
+    },
+    {
+      "id": "4",
+      "itemName": "Latte",
+      "description": "Caffè latte, often shortened to just latte in English, is a coffee drink of Italian origin made with espresso and steamed milk, traditionally served in a glass.",
+      "temp": "hot",
+      "price": "5.40",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Caffe_Latte_at_Pulse_Cafe.jpg/330px-Caffe_Latte_at_Pulse_Cafe.jpg"
+    },
+    {
+      "id": "5",
+      "itemName": "Caffè macchiato",
+      "description": "Caffè macchiato, sometimes called espresso macchiato and often shortened to just macchiato in English, is an espresso coffee drink with a small amount of milk, usually foamed.",
+      "temp": "hot",
+      "price": "4.30",
+      "image": "https://sfiziedeliziepalermo.com/wp-content/uploads/2020/06/CAFFe-MACCHIATO.jpg"
+    },
+    {
+      "id": "6",
+      "itemName": "Flat white",
+      "description": "A flat white is a coffee drink consisting of espresso and steamed milk. It generally has a higher proportion of espresso to milk than a caffè latte, and lacks the thick layer of foam in a cappuccino.",
+      "temp": "hot",
+      "price": "2.70",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-d8ada0f.jpg?quality=90&webp=true&resize=440,400"
+    }
+  ]
 }
