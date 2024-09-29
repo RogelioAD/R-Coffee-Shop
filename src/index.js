@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { ProductProvider } from './ProductContext';
-
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ProductProvider } from "./ProductContext";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,5 +10,5 @@ ReactDOM.render(
       <App />
     </ProductProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
